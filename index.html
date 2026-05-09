@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#ffb6c1;
+}
+
+/* PAGES */
+
+.page{
+    width:100%;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    transition:1s;
+    padding:20px;
+}
+
+.active{
+    left:0;
+}
+
+/* PAGE 1 */
+
+#page1{
+    background:linear-gradient(135deg,#ff9eb5,#ffbfd1);
+}
+
+.title{
+    font-size:60px;
+    color:white;
+    margin-top:40px;
+    text-shadow:0 0 20px rgba(255,255,255,0.8);
+}
+
+.arrow{
+    margin-top:40px;
+    font-size:60px;
+    color:white;
+    cursor:pointer;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(15px);}
+}
+
+/* ROSE */
+
+.rose-container{
+    position:relative;
+    width:200px;
+    height:250px;
+}
+
+.stem{
+    width:8px;
+    height:140px;
+    background:green;
+    position:absolute;
+    bottom:0;
+    left:96px;
+}
+
+.petal{
+    width:70px;
+    height:70px;
+    background:#ff0055;
+    position:absolute;
+    border-radius:50%;
+    opacity:0;
+    animation: bloom 3s forwards;
+}
+
+.p1{ top:50px; left:65px; animation-delay:0.5s; }
+.p2{ top:20px; left:65px; animation-delay:1s; }
+.p3{ top:50px; left:30px; animation-delay:1.5s; }
+.p4{ top:50px; left:100px; animation-delay:2s; }
+
+@keyframes bloom{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* PAGE 2 */
+
+#page2{
+    background:linear-gradient(135deg,#ffc1d6,#ffd9e6);
+    color:white;
+    text-align:center;
+}
+
+.note{
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 30px rgba(255,255,255,0.3);
+    animation: fadeIn 2s;
+}
+
+.note h1{
+    margin-bottom:20px;
+    font-size:45px;
+}
+
+.note p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:40px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4f87;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* PAGE 3 */
+
+#page3{
+    background:black;
+    overflow:hidden;
+}
+
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:0.2;}
+    to{opacity:1;}
+}
+
+.final-message{
+    position:relative;
+    z-index:2;
+    color:white;
+    text-align:center;
+    animation: fadeIn 3s;
+}
+
+.final-message h1{
+    font-size:60px;
+    margin-bottom:20px;
+    color:#ff80aa;
+}
+
+.final-message p{
+    font-size:24px;
+    width:80%;
+    margin:auto;
+    line-height:1.8;
+}
+
+.heart{
+    font-size:80px;
+    margin-top:30px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.2);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+    <div class="rose-container">
+        <div class="stem"></div>
+        <div class="petal p1"></div>
+        <div class="petal p2"></div>
+        <div class="petal p3"></div>
+        <div class="petal p4"></div>
+    </div>
+
+    <h1 class="title">Are You Ready?</h1>
+
+    <div class="arrow" onclick="nextPage(2)">➜</div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+    <div class="note">
+
+        <h1>For You 🌸</h1>
+
+        <p>
+            I just wanted to appreciate something that maybe you don't even realize yourself.  
+            The way you've been putting efforts into our friendship lately genuinely means a lot to me.  
+
+            Your behavior, your care, your time, your presence... everything feels comforting and special.  
+
+            In a world where most connections become dry with time, you somehow made this friendship feel warmer and more meaningful day by day.  
+
+            And honestly, not everyone notices efforts the way they should be noticed...  
+            but I do.  
+
+            So this little thing is just a reminder that your efforts are valued, appreciated, and never ignored. 💖
+        </p>
+
+        <button class="btn" onclick="nextPage(3)">Go Ahead ✨</button>
+
+    </div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+    <div class="stars" id="stars"></div>
+
+    <div class="final-message">
+
+        <h1>You’re Rare 🌹</h1>
+
+        <p>
+            Some people enter life and simply stay like ordinary memories.  
+            But some people leave peace in your mind, comfort in your heart,  
+            and smiles in moments you didn't expect.  
+
+            You're becoming one of those people for me.  
+
+            Thank you for being genuine.  
+            Thank you for your efforts.  
+            Thank you for making this friendship feel beautiful. ✨
+        </p>
+
+        <div class="heart">❤️</div>
+
+    </div>
+
+</div>
+
+<script>
+
+function nextPage(pageNumber){
+
+    document.querySelectorAll('.page').forEach(page=>{
+        page.classList.remove('active');
+    });
+
+    document.getElementById('page'+pageNumber).classList.add('active');
+}
+
+/* STARS */
+
+const starsContainer = document.getElementById('stars');
+
+for(let i=0;i<120;i++){
+
+    let star = document.createElement('div');
+    star.classList.add('star');
+
+    star.style.top = Math.random()*100 + "%";
+    star.style.left = Math.random()*100 + "%";
+
+    star.style.animationDuration = (Math.random()*3+1)+"s";
+
+    starsContainer.appendChild(star);
+}
+
+</script>
+
+</body>
+</html>
