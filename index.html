@@ -11,12 +11,11 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
     overflow:hidden;
-    background:#ffb6c1;
 }
 
 /* PAGES */
@@ -42,69 +41,135 @@ body{
 /* PAGE 1 */
 
 #page1{
-    background:linear-gradient(135deg,#ff9eb5,#ffbfd1);
+    background:linear-gradient(135deg,#ff9eb5,#ffc7d7);
 }
 
 .title{
-    font-size:60px;
+    font-size:65px;
     color:white;
-    margin-top:40px;
+    margin-top:30px;
     text-shadow:0 0 20px rgba(255,255,255,0.8);
+    text-align:center;
 }
 
 .arrow{
     margin-top:40px;
-    font-size:60px;
+    font-size:65px;
     color:white;
     cursor:pointer;
-    animation: bounce 1.5s infinite;
+    animation:bounce 1.5s infinite;
 }
 
 @keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(15px);}
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(15px);
+    }
 }
 
-/* ROSE */
+/* REALISTIC ROSE */
 
 .rose-container{
     position:relative;
-    width:200px;
-    height:250px;
+    width:220px;
+    height:320px;
+    margin-bottom:20px;
 }
 
 .stem{
-    width:8px;
-    height:140px;
-    background:green;
     position:absolute;
+    width:8px;
+    height:170px;
+    background:linear-gradient(to bottom,#0d7a2f,#29b34a);
     bottom:0;
-    left:96px;
+    left:106px;
+    border-radius:10px;
+}
+
+.leaf{
+    position:absolute;
+    width:45px;
+    height:22px;
+    background:#1fa542;
+    border-radius:50px 0;
+}
+
+.leaf1{
+    bottom:90px;
+    left:70px;
+    transform:rotate(-35deg);
+}
+
+.leaf2{
+    bottom:120px;
+    left:105px;
+    transform:rotate(145deg);
+}
+
+.rose{
+    position:absolute;
+    top:35px;
+    left:45px;
+    width:130px;
+    height:130px;
 }
 
 .petal{
-    width:70px;
-    height:70px;
-    background:#ff0055;
     position:absolute;
+    width:75px;
+    height:75px;
+    background:#ff004f;
     border-radius:50%;
     opacity:0;
-    animation: bloom 3s forwards;
+    transform:scale(0);
+    animation:bloom 1.5s forwards;
+    box-shadow:0 0 15px rgba(255,0,90,0.4);
 }
 
-.p1{ top:50px; left:65px; animation-delay:0.5s; }
-.p2{ top:20px; left:65px; animation-delay:1s; }
-.p3{ top:50px; left:30px; animation-delay:1.5s; }
-.p4{ top:50px; left:100px; animation-delay:2s; }
+.p1{
+    top:30px;
+    left:28px;
+    animation-delay:0.3s;
+}
+
+.p2{
+    top:0;
+    left:28px;
+    animation-delay:0.9s;
+}
+
+.p3{
+    top:28px;
+    left:0;
+    animation-delay:1.5s;
+}
+
+.p4{
+    top:28px;
+    left:56px;
+    animation-delay:2.1s;
+}
+
+.p5{
+    top:18px;
+    left:18px;
+    background:#ff1f68;
+    animation-delay:2.8s;
+}
 
 @keyframes bloom{
-    from{
-        transform:scale(0);
+
+    0%{
         opacity:0;
+        transform:scale(0) rotate(-20deg);
     }
-    to{
-        transform:scale(1);
+
+    100%{
         opacity:1;
+        transform:scale(1) rotate(0deg);
     }
 }
 
@@ -112,28 +177,28 @@ body{
 
 #page2{
     background:linear-gradient(135deg,#ffc1d6,#ffd9e6);
-    color:white;
     text-align:center;
 }
 
 .note{
-    max-width:700px;
-    background:rgba(255,255,255,0.15);
+    max-width:750px;
+    background:rgba(255,255,255,0.2);
     padding:40px;
     border-radius:25px;
     backdrop-filter:blur(10px);
     box-shadow:0 0 30px rgba(255,255,255,0.3);
-    animation: fadeIn 2s;
+    animation:fadeIn 2s;
+    color:#c40032;
 }
 
 .note h1{
     margin-bottom:20px;
-    font-size:45px;
+    font-size:50px;
 }
 
 .note p{
-    font-size:22px;
-    line-height:1.8;
+    font-size:23px;
+    line-height:1.9;
 }
 
 .btn{
@@ -153,10 +218,12 @@ body{
 }
 
 @keyframes fadeIn{
+
     from{
         opacity:0;
         transform:translateY(40px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
@@ -182,12 +249,18 @@ body{
     height:3px;
     background:white;
     border-radius:50%;
-    animation: twinkle 2s infinite alternate;
+    animation:twinkle 2s infinite alternate;
 }
 
 @keyframes twinkle{
-    from{opacity:0.2;}
-    to{opacity:1;}
+
+    from{
+        opacity:0.2;
+    }
+
+    to{
+        opacity:1;
+    }
 }
 
 .final-message{
@@ -195,12 +268,12 @@ body{
     z-index:2;
     color:white;
     text-align:center;
-    animation: fadeIn 3s;
+    animation:fadeIn 3s;
 }
 
 .final-message h1{
-    font-size:60px;
-    margin-bottom:20px;
+    font-size:65px;
+    margin-bottom:25px;
     color:#ff80aa;
 }
 
@@ -208,21 +281,36 @@ body{
     font-size:24px;
     width:80%;
     margin:auto;
-    line-height:1.8;
+    line-height:1.9;
 }
 
 .heart{
-    font-size:80px;
+    font-size:90px;
     margin-top:30px;
-    animation: heartbeat 1.5s infinite;
+    animation:heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat{
-    0%{transform:scale(1);}
-    25%{transform:scale(1.2);}
-    50%{transform:scale(1);}
-    75%{transform:scale(1.2);}
-    100%{transform:scale(1);}
+
+    0%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.2);
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    75%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
 }
 
 </style>
@@ -235,11 +323,20 @@ body{
 <div class="page active" id="page1">
 
     <div class="rose-container">
+
+        <div class="rose">
+            <div class="petal p1"></div>
+            <div class="petal p2"></div>
+            <div class="petal p3"></div>
+            <div class="petal p4"></div>
+            <div class="petal p5"></div>
+        </div>
+
         <div class="stem"></div>
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
+
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+
     </div>
 
     <h1 class="title">Are You Ready?</h1>
@@ -257,17 +354,20 @@ body{
         <h1>For You 🌸</h1>
 
         <p>
-            I just wanted to appreciate something that maybe you don't even realize yourself.  
-            The way you've been putting efforts into our friendship lately genuinely means a lot to me.  
+            Main bas ek cheez appreciate karna chahta tha jo shayad tum khud bhi realize nahi karti.  
+            Pichle kuch time se tum jis tarah efforts laga rahi ho hamari friendship mein, woh genuinely mere liye kaafi special hai.  
 
-            Your behavior, your care, your time, your presence... everything feels comforting and special.  
+            Tumhara behavior, care, time aur presence... sab kuch ek alag sa comfort feel karwata hai.  
 
-            In a world where most connections become dry with time, you somehow made this friendship feel warmer and more meaningful day by day.  
+            Aaj kal zyada tar connections time ke saath dry ho jaate hain,  
+            but tumne iss friendship ko aur zyada warm aur meaningful bana diya hai.  
 
-            And honestly, not everyone notices efforts the way they should be noticed...  
-            but I do.  
+            Aur honestly, har kisi ke efforts notice nahi kiye jaate...  
+            but main karta hoon.  
 
-            So this little thing is just a reminder that your efforts are valued, appreciated, and never ignored. 💖
+            Toh yeh choti si cheez bas iss baat ka reminder hai ki  
+            tumhare efforts valued hain, appreciated hain,  
+            aur kabhi ignore nahi kiye gaye. 💖
         </p>
 
         <button class="btn" onclick="nextPage(3)">Go Ahead ✨</button>
@@ -287,15 +387,15 @@ body{
         <h1>You’re Rare 🌹</h1>
 
         <p>
-            Some people enter life and simply stay like ordinary memories.  
-            But some people leave peace in your mind, comfort in your heart,  
-            and smiles in moments you didn't expect.  
+            Kuch log life mein aate hain aur bas ek normal memory banke reh jaate hain.  
+            But kuch log unknowingly dil ko peace, mind ko comfort  
+            aur moments ko genuine smiles de jaate hain.  
 
-            You're becoming one of those people for me.  
+            Aur tum dheere dheere mere liye unhi logon mein se ek ban rahi ho.  
 
-            Thank you for being genuine.  
-            Thank you for your efforts.  
-            Thank you for making this friendship feel beautiful. ✨
+            Thank you genuine hone ke liye.  
+            Thank you efforts lagane ke liye.  
+            Aur thank you iss friendship ko itna beautiful feel karwane ke liye. ✨
         </p>
 
         <div class="heart">❤️</div>
@@ -322,9 +422,11 @@ const starsContainer = document.getElementById('stars');
 for(let i=0;i<120;i++){
 
     let star = document.createElement('div');
+
     star.classList.add('star');
 
     star.style.top = Math.random()*100 + "%";
+
     star.style.left = Math.random()*100 + "%";
 
     star.style.animationDuration = (Math.random()*3+1)+"s";
