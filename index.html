@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>For Someone Special ❤️</title>
 
 <style>
@@ -12,16 +12,19 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
-body{
+html,body{
+    width:100%;
+    height:100%;
     overflow:hidden;
 }
 
 /* PAGES */
 
 .page{
-    width:100%;
+    width:100vw;
     height:100vh;
     position:absolute;
     top:0;
@@ -30,9 +33,9 @@ body{
     justify-content:center;
     align-items:center;
     flex-direction:column;
-    transition:1s;
-    padding:20px;
-    overflow-y:auto;
+    transition:0.8s;
+    padding:5vw;
+    overflow:hidden;
 }
 
 .active{
@@ -46,82 +49,88 @@ body{
 }
 
 .title{
-    font-size:42px;
+    font-size:10vw;
     color:white;
-    margin-top:20px;
+    margin-top:4vw;
     text-shadow:0 0 20px rgba(255,255,255,0.8);
     text-align:center;
 }
 
 .arrow{
-    margin-top:30px;
-    font-size:50px;
+    margin-top:5vw;
+    font-size:12vw;
     color:white;
     cursor:pointer;
     animation:bounce 1.5s infinite;
 }
 
 @keyframes bounce{
+
     0%,100%{
         transform:translateY(0);
     }
 
     50%{
-        transform:translateY(12px);
+        transform:translateY(3vw);
     }
 }
 
-/* ROSE */
+/* REALISTIC ROSE */
 
 .rose-container{
     position:relative;
-    width:180px;
-    height:260px;
-    margin-bottom:10px;
+    width:45vw;
+    height:65vw;
+    max-width:220px;
+    max-height:320px;
 }
 
 .stem{
     position:absolute;
-    width:7px;
-    height:140px;
+    width:2vw;
+    max-width:8px;
+    height:38vw;
+    max-height:170px;
     background:linear-gradient(to bottom,#0d7a2f,#29b34a);
     bottom:0;
-    left:87px;
+    left:50%;
+    transform:translateX(-50%);
     border-radius:10px;
 }
 
 .leaf{
     position:absolute;
-    width:38px;
-    height:20px;
+    width:10vw;
+    height:5vw;
     background:#1fa542;
     border-radius:50px 0;
 }
 
 .leaf1{
-    bottom:80px;
-    left:55px;
+    bottom:22vw;
+    left:12vw;
     transform:rotate(-35deg);
 }
 
 .leaf2{
-    bottom:110px;
-    left:88px;
+    bottom:30vw;
+    right:11vw;
     transform:rotate(145deg);
 }
 
 .rose{
     position:absolute;
-    top:30px;
-    left:28px;
-    width:120px;
-    height:120px;
+    top:5vw;
+    left:50%;
+    transform:translateX(-50%);
+    width:30vw;
+    height:30vw;
 }
 
 .petal{
     position:absolute;
-    width:65px;
-    height:65px;
+    width:16vw;
+    height:16vw;
     background:#ff004f;
     border-radius:50%;
     opacity:0;
@@ -131,32 +140,32 @@ body{
 }
 
 .p1{
-    top:25px;
-    left:25px;
+    top:7vw;
+    left:7vw;
     animation-delay:0.3s;
 }
 
 .p2{
     top:0;
-    left:25px;
+    left:7vw;
     animation-delay:0.9s;
 }
 
 .p3{
-    top:25px;
+    top:7vw;
     left:0;
     animation-delay:1.5s;
 }
 
 .p4{
-    top:25px;
-    left:50px;
+    top:7vw;
+    left:14vw;
     animation-delay:2.1s;
 }
 
 .p5{
-    top:15px;
-    left:15px;
+    top:4vw;
+    left:4vw;
     background:#ff1f68;
     animation-delay:2.8s;
 }
@@ -178,45 +187,45 @@ body{
 
 #page2{
     background:linear-gradient(135deg,#ffc1d6,#ffd9e6);
-    text-align:center;
 }
 
 .note{
     width:100%;
-    max-width:700px;
+    max-width:95vw;
     background:rgba(255,255,255,0.2);
-    padding:25px;
-    border-radius:20px;
+    padding:6vw;
+    border-radius:6vw;
     backdrop-filter:blur(10px);
-    box-shadow:0 0 30px rgba(255,255,255,0.3);
+    box-shadow:0 0 20px rgba(255,255,255,0.3);
     animation:fadeIn 2s;
     color:#c40032;
+    text-align:center;
 }
 
 .note h1{
-    margin-bottom:15px;
-    font-size:34px;
+    margin-bottom:4vw;
+    font-size:8vw;
 }
 
 .note p{
-    font-size:17px;
+    font-size:4.2vw;
     line-height:1.8;
 }
 
 .btn{
-    margin-top:30px;
-    padding:14px 35px;
+    margin-top:6vw;
+    padding:3.5vw 8vw;
     border:none;
     border-radius:50px;
     background:white;
     color:#ff4f87;
-    font-size:20px;
+    font-size:4.5vw;
     cursor:pointer;
     transition:0.4s;
 }
 
-.btn:hover{
-    transform:scale(1.08);
+.btn:active{
+    transform:scale(0.95);
 }
 
 @keyframes fadeIn{
@@ -236,7 +245,6 @@ body{
 
 #page3{
     background:black;
-    overflow:hidden;
 }
 
 .stars{
@@ -247,8 +255,8 @@ body{
 
 .star{
     position:absolute;
-    width:3px;
-    height:3px;
+    width:2px;
+    height:2px;
     background:white;
     border-radius:50%;
     animation:twinkle 2s infinite alternate;
@@ -270,25 +278,25 @@ body{
     z-index:2;
     color:white;
     text-align:center;
-    padding:20px;
+    width:100%;
+    padding:5vw;
     animation:fadeIn 3s;
 }
 
 .final-message h1{
-    font-size:42px;
-    margin-bottom:20px;
+    font-size:9vw;
+    margin-bottom:5vw;
     color:#ff80aa;
 }
 
 .final-message p{
-    font-size:18px;
-    width:100%;
+    font-size:4.5vw;
     line-height:1.9;
 }
 
 .heart{
-    font-size:70px;
-    margin-top:25px;
+    font-size:15vw;
+    margin-top:5vw;
     animation:heartbeat 1.5s infinite;
 }
 
@@ -312,31 +320,6 @@ body{
 
     100%{
         transform:scale(1);
-    }
-}
-
-/* MOBILE EXTRA */
-
-@media(max-width:480px){
-
-    .title{
-        font-size:36px;
-    }
-
-    .note p{
-        font-size:16px;
-    }
-
-    .final-message p{
-        font-size:17px;
-    }
-
-    .final-message h1{
-        font-size:36px;
-    }
-
-    .btn{
-        font-size:18px;
     }
 }
 
@@ -442,8 +425,6 @@ function nextPage(pageNumber){
     document.getElementById('page'+pageNumber).classList.add('active');
 }
 
-/* STARS */
-
 const starsContainer = document.getElementById('stars');
 
 for(let i=0;i<120;i++){
@@ -453,7 +434,6 @@ for(let i=0;i<120;i++){
     star.classList.add('star');
 
     star.style.top = Math.random()*100 + "%";
-
     star.style.left = Math.random()*100 + "%";
 
     star.style.animationDuration = (Math.random()*3+1)+"s";
